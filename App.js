@@ -1,12 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView, ScrollView, FlatList } from 'react-native';
-// import ListaContador from './components/ListaContador';
-// import Greeting from './components/Greeting';
-// import UserDetails from './components/UserDetails';
-// import Task from './components/Task';
-// import ToggleText from './components/ToggleText';
-// import DynamicForm from './components/DynamicForm';
-// import ClickCounter from './components/ClickCounter';
+import ListaContador from './components/ListaContador';
+import Greeting from './components/Greeting';
+import UserDetails from './components/UserDetails';
+import Task from './components/Task';
+import ToggleText from './components/ToggleText';
+import DynamicForm from './components/DynamicForm';
+import ClickCounter from './components/ClickCounter';
 
 export default function App() {
 
@@ -19,8 +19,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <SafeAreaView style={styles.safeArea}>
-      <Text>Hola</Text>
-        {/* <ScrollView contentContainerStyle={styles.scrollView}>
+        <ScrollView contentContainerStyle={styles.scrollView}>
           <Greeting name="Brandon Echeverry" />
           <Greeting name="Celena Mosquera" />
           <Greeting name="Yorleisy Ramos" />
@@ -33,13 +32,14 @@ export default function App() {
           <DynamicForm />
           <ClickCounter />
           <ListaContador />
+        </ScrollView> 
           <FlatList
+            nestedScrollEnabled={true}
             style={styles.flatList}
             data={tareas}
             renderItem={({ item }) => <Task task={item} />}
             keyExtractor={(item, index) => index.toString()}
           />
-        </ScrollView>  */}
       </SafeAreaView>
     </View>
   );
